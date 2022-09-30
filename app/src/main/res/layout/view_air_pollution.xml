@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="airPollutionItem"
+            type="com.example.weatherapp.model.remote.data.airPollution.AirPollutionItem" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="120dp"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:layout_margin="8dp"
+    android:background="@color/orange">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CO"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_co"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{Double.toString(airPollutionItem.components.co)}"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NO"
+        app:layout_constraintTop_toBottomOf="@id/tv_co"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{Double.toString(airPollutionItem.components.no)}"
+        app:layout_constraintTop_toBottomOf="@id/tv_co"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NO2"
+        app:layout_constraintTop_toBottomOf="@id/tv_no"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_no2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{Double.toString(airPollutionItem.components.no2)}"
+        app:layout_constraintTop_toBottomOf="@id/tv_no"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="O3"
+        app:layout_constraintTop_toBottomOf="@id/tv_no2"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_o3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{Double.toString(airPollutionItem.components.o3)}"
+        app:layout_constraintTop_toBottomOf="@id/tv_no2"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SO2"
+        app:layout_constraintTop_toBottomOf="@id/tv_o3"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_so2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{Double.toString(airPollutionItem.components.so2)}"
+        app:layout_constraintTop_toBottomOf="@id/tv_o3"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PM2.5"
+        app:layout_constraintTop_toBottomOf="@id/tv_so2"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_pm2_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{Double.toString(airPollutionItem.components.pm2_5)}"
+        app:layout_constraintTop_toBottomOf="@id/tv_so2"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PM10"
+        app:layout_constraintTop_toBottomOf="@id/tv_pm2_5"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_pm10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{Double.toString(airPollutionItem.components.pm10)}"
+        app:layout_constraintTop_toBottomOf="@id/tv_pm2_5"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NH3"
+        app:layout_constraintTop_toBottomOf="@id/tv_pm10"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_nh3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{Double.toString(airPollutionItem.components.nh3)}"
+        app:layout_constraintTop_toBottomOf="@id/tv_pm10"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

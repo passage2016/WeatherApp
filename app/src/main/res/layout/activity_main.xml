@@ -53,7 +53,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="12℃"
         android:textSize="60sp"
         android:textColor="@color/black"
         app:layout_constraintTop_toTopOf="parent"
@@ -63,7 +62,6 @@
         android:id="@+id/tv_city"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="London"
         android:textSize="40sp"
         android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@id/tv_temp"
@@ -79,5 +77,16 @@
         app:spanCount="4"
         android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@id/tv_city" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rr_air_pollution"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/view_air_pollution"
+        tools:itemCount="4"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:spanCount="4"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/rr_forecast" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
